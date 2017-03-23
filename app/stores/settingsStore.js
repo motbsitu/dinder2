@@ -13,8 +13,12 @@ export default class SettingsStore extends MobxFirebaseStore {
     firebase.initializeApp(config)
     super(firebase.database().ref())
 
-    this.splashTime = 5000
+    this.splashTime = 1000
     this.splashImg = require('../../images/splash.jpg')
+    this.loginBG = require ('../../images.login.jpg')
+  }
+  get LoginBG(){
+    return this.loginBG
   }
   get SplashTime(){
     return this.splashTime
