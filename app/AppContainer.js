@@ -6,15 +6,17 @@ import SideMenu from './components/sideMenu'
 
 import SettingsStore from './stores/settingsStore'
 import AuthStore from './stores/authStore'
+import MatchStore from './stores/matchStore'
 
 import SplashScene from './scenes/splashScene'
 import LoginScene from './scenes/loginScene'
-
+import MatchScene from './scenes/matchScene'
 
 import theme from './theme/base-theme'
 
 const settings = new SettingsStore()
 const authStore = new AuthStore()
+const matchStore = new MatchStore()
 
 export default class AppContainer extends Component {
   constructor(props) {
@@ -23,7 +25,8 @@ export default class AppContainer extends Component {
       toggled: false,
       store: {
         settings: settings,
-        auth: authStore
+        auth: authStore,
+        matches: matchStore
       },
       theme: theme
     }
@@ -44,6 +47,9 @@ export default class AppContainer extends Component {
       }
       case 'Login': {
           return <LoginScene {...route.passProps} navigator={navigator} />
+      }
+      case 'Match': {
+        return <MatchScene {...route.passProps} navigator={navigator} />
       }
       default: {
         return null
