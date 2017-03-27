@@ -10,7 +10,7 @@ export default class MatchStore extends MobxFirebaseStore {
     })
   }
     resolveFirebaseQuery(sub){
-      return this.user ? this.fb.child(sub.path).orderByChild('viewedBy/' +this.user.uid).equalTo(null).limitToLast(10) : []
+      return this.user ? this.fb.child(sub.path).orderByChild('viewedBy/'+this.user.uid).equalTo(null).limitToLast(10) : []
   }
 
   @action

@@ -18,7 +18,6 @@ class MatchList extends Component {
     super(props)
     this.state = {
       fetching: null
-
     }
   }
   static getSubs(props, state){
@@ -39,14 +38,14 @@ class MatchList extends Component {
   }
   renderCard(post, store){
     const postObj = post ? post[1] : null
-    if(postObj){
+    if(postObj) {
       let pic = {uri: postObj.url}
       let text = postObj.Text
 
       return (
         <View style={styles.card}>
           {pic.uri != undefined && pic.uri != "" ? <Thumbnail source = {pic}/> : null}
-          <Text style={style.text}>
+          <Text style={styles.text}>
             {text}
           </Text>
         </View>
@@ -56,7 +55,7 @@ class MatchList extends Component {
   }
   renderNoMoreCards(){
     return (
-      <View style={style.noMoreCards}>
+      <View style={styles.noMoreCards}>
         <Text> Out of Matches </Text>
       </View>
     )

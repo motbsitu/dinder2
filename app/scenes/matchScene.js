@@ -26,14 +26,14 @@ export default class MatchScene extends Component {
         <Header>
           <Button transparent
             onPress={this.props.toggleDrawer}>
-            <Icon name="menu"/>
+            <Icon name='menu'/>
           </Button>
           <Title>
             Matches
           </Title>
           <Button transparent
             onPress={this.postScene.bind(this)}>
-            <Icon name="camera" color="white" size={28}/>
+            <Icon name='camera' color='white' size={28}/>
           </Button>
         </Header>
         <View>
