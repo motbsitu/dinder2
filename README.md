@@ -1,2 +1,2 @@
-#Dinner Finder Mobile App
-##React-Native Learning
+# Dinner Finder Mobile App
+## React-Native Learning
